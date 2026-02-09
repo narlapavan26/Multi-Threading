@@ -113,6 +113,6 @@ Then input the number of elements when prompted.
 
 ## 👨‍💻 Author
 
-Made with ❤️ by Mani, optimized for performance.
+Made with ❤️ by pavan, optimized for performance.
 
 ---
