@@ -177,7 +177,7 @@ This multi-threaded sort comparison helps:
 ---
 
 ## Author
-**Mani** - [GitHub Profile](https://github.com/your-github-username)
+**pavan**
 
 ---
 
