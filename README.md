@@ -70,7 +70,7 @@ This repository is licensed under the **MIT License**. Feel free to use, modify,
 
 ## 🙋‍♂️ Author
 
-**Mani**  
+**Pavan**  
 Passionate about system-level optimization, concurrency, and breaking the limits of CPU-bound programs.
 
 [GitHub](https://github.com/manitejagaddam)
