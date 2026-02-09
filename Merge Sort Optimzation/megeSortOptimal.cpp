@@ -57,20 +57,20 @@ void threadedMergeSort(vector<int> & nums, int start, int end, int depth = 0){
 
 }
 
-void futherMergeSort(vector<int> & nums, int start, int end, int depth = 0){
+void futureMergeSort(vector<int> & nums, int start, int end, int depth = 0){
     if(start >= end) return;
 
     int mid = (start + end) / 2;
 
     if(depth <= 3){
-        auto leftFuther = async(launch::async, futherMergeSort, ref(nums), start, mid, depth + 1);
-        auto rightFuther = async(launch::async, futherMergeSort, ref(nums), mid + 1, end, depth + 1);
+        auto leftFuture = async(launch::async, futureMergeSort, ref(nums), start, mid, depth + 1);
+        auto rightFuture = async(launch::async, futureMergeSort, ref(nums), mid + 1, end, depth + 1);
 
-        leftFuther.get();
-        rightFuther.get();
+        leftFuture.get();
+        rightFuture.get();
     }else{
-        futherMergeSort(nums, start, mid, depth + 1);
-        futherMergeSort(nums, mid + 1, end, depth + 1);
+        futureMergeSort(nums, start, mid, depth + 1);
+        futureMergeSort(nums, mid + 1, end, depth + 1);
     }
 
     merge(nums, start, mid, end);
@@ -137,12 +137,12 @@ int main(){
 
 
     start = high_resolution_clock::now();
-    futherMergeSort(nums3, 0, noe - 1);
+    futureMergeSort(nums3, 0, noe - 1);
     end = high_resolution_clock::now();
 
     time_taken = end - start;
 
-    cout << "Time taken for Futhre Threaded Merge Sort : " << time_taken.count() << endl;
+    cout << "Time taken for Future Threaded Merge Sort : " << time_taken.count() << endl;
 
 
     return 0;
